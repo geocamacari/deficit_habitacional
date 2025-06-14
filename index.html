@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: Déficit Habitacional de Camaçari-BA (2022)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* bg-slate-50 */
+        }
+        .section-title {
+            font-weight: 700;
+            color: #5b21b6; /* violet-700 */
+        }
+        .subsection-title {
+            font-weight: 600;
+            color: #8b5cf6; /* violet-500 */
+        }
+        .footer-text {
+            font-size: 0.75rem; /* text-xs */
+            color: #64748b; /* slate-500 */
+            text-align: center;
+            border-top: 1px solid #e2e8f0; /* border-slate-200 */
+            padding-top: 1rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem; /* p-6 */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            height: 100%;
+        }
+        .icon {
+            width: 3rem;
+            height: 3rem;
+            stroke-width: 1.5;
+        }
+        /* Estilos para o gráfico de rosca */
+        .pie-chart {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-image: conic-gradient(
+                #ef4444 0% 4.6%,        /* Habitação Precária - red-500 */
+                #f97316 4.6% 21.6%,   /* Ônus Excessivo - orange-500 */
+                #22c55e 21.6% 100%    /* Coabitação Familiar - green-500 */
+            );
+        }
+        .pie-chart-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 180px;
+            height: 180px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        
+        <!-- Cabeçalho -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Estimativa do Déficit Habitacional Quantitativo</h1>
+            <p class="text-xl md:text-2xl subsection-title mt-2">Município de Camaçari-BA (Base 2022)</p>
+        </header>
+
+        <!-- Seção: Conceitual -->
+        <section class="mb-12">
+             <h2 class="text-2xl section-title text-center mb-8">O que é o Déficit Habitacional?</h2>
+             <div class="card bg-violet-50 border-l-4 border-violet-500">
+                <div class="flex items-start">
+                    <svg class="w-12 h-12 text-violet-600 mr-6 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636l1.5-2.2M2.25 9l1.5-2.2m0 0l2.25 2.2" /></svg>
+                    <div>
+                        <p class="text-slate-700 leading-relaxed">
+                            A quantificação do <strong>déficit habitacional</strong> é um instrumento essencial para o planejamento urbano e a formulação de políticas habitacionais eficazes. Ela mede a <strong>necessidade de novas moradias</strong> e se concentra em dois aspectos principais: a substituição de habitações inadequadas e a necessidade de novas unidades para famílias que vivem em coabitação ou sob o peso de um aluguel excessivo.
+                        </p>
+                        <p class="mt-4 text-slate-700 leading-relaxed">
+                            Este diagnóstico fornece aos técnicos e gestores um panorama robusto das carências habitacionais, permitindo um direcionamento mais preciso de recursos e esforços para as áreas e populações mais vulneráveis, em consonância com o <strong>direito à moradia adequada</strong>.
+                        </p>
+                    </div>
+                </div>
+             </div>
+             <footer class="footer-text">
+                Infográfico elaborado pela Coordenadoria de Planejamento e Projetos – (CPP) / Diretoria de Urbanismo (DIRURB) / SEDUR (PMC)
+            </footer>
+        </section>
+
+        <!-- Seção: Resumo Principal -->
+        <section class="mb-12">
+            <h2 class="text-2xl section-title text-center mb-8">Estimativa Principal para Camaçari</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="card flex flex-col items-center justify-center text-center">
+                    <p class="text-lg text-slate-600">Déficit Habitacional Total Estimado</p>
+                    <p class="text-6xl font-bold text-violet-700 my-4">16.635</p>
+                    <p class="text-lg text-slate-600">unidades</p>
+                    <p class="mt-4 text-base font-semibold bg-violet-100 text-violet-800 px-4 py-2 rounded-full">
+                        Representa 15,13% dos domicílios particulares permanentes ocupados (DPPO) de Camaçari
+                    </p>
+                </div>
+                <div class="card flex flex-col items-center">
+                     <h2 class="text-xl section-title mb-4">Composição do Déficit</h2>
+                    <div class="pie-chart">
+                        <div class="pie-chart-center">
+                            <span class="text-3xl font-bold">100%</span>
+                            <span class="text-slate-500">Total</span>
+                        </div>
+                    </div>
+                    <div class="w-full mt-6 space-y-2">
+                        <div class="flex items-center justify-between text-sm">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 rounded-full bg-green-500 mr-2"></span>
+                                <span>Coabitação Familiar</span>
+                            </div>
+                            <span class="font-semibold">78,4%</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 rounded-full bg-orange-500 mr-2"></span>
+                                <span>Ônus Excessivo com Aluguel</span>
+                            </div>
+                            <span class="font-semibold">17,0%</span>
+                        </div>
+                         <div class="flex items-center justify-between text-sm">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 rounded-full bg-red-500 mr-2"></span>
+                                <span>Habitação Precária</span>
+                            </div>
+                            <span class="font-semibold">4,6%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <footer class="footer-text">
+                Infográfico elaborado pela Coordenadoria de Planejamento e Projetos – (CPP) / Diretoria de Urbanismo (DIRURB) / SEDUR (PMC)
+            </footer>
+        </section>
+
+        <!-- Seção: Componentes do Déficit -->
+        <section class="mb-12">
+            <h2 class="text-2xl section-title text-center mb-8">Entendendo os Componentes do Déficit</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card: Coabitação Familiar -->
+                <div class="card text-center flex flex-col">
+                    <div class="flex-grow">
+                        <div class="flex justify-center mb-4">
+                            <svg class="icon text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl subsection-title mb-2">Coabitação Familiar</h3>
+                        <p class="text-4xl font-bold text-green-600 mb-2">13.035</p>
+                        <p class="text-slate-600">Famílias que dividem o mesmo domicílio por necessidade, em condições de adensamento excessivo (>2 pessoas por dormitório) ou em cômodos.</p>
+                    </div>
+                </div>
+                <!-- Card: Ônus Excessivo com Aluguel -->
+                <div class="card text-center flex flex-col">
+                     <div class="flex-grow">
+                        <div class="flex justify-center mb-4">
+                            <svg class="icon text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
+                        </div>
+                        <h3 class="text-xl subsection-title mb-2">Ônus Excessivo com Aluguel</h3>
+                        <p class="text-4xl font-bold text-orange-600 mb-2">2.832*</p>
+                        <p class="text-slate-600">Famílias urbanas com renda de até 3 salários mínimos que gastam mais de 30% da renda com aluguel.</p>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">*Valor estimado com base em dados do CadÚnico e PNAD Contínua.</p>
+                </div>
+                <!-- Card: Habitação Precária -->
+                <div class="card text-center flex flex-col">
+                     <div class="flex-grow">
+                        <div class="flex justify-center mb-4">
+                            <svg class="icon text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        </div>
+                        <h3 class="text-xl subsection-title mb-2">Habitação Precária</h3>
+                        <p class="text-4xl font-bold text-red-600 mb-2">768</p>
+                        <p class="text-slate-600">Domicílios com estrutura inadequada (rústicos, sem paredes de alvenaria) ou improvisados (locais não destinados à moradia).</p>
+                    </div>
+                </div>
+            </div>
+             <footer class="footer-text">
+                Infográfico elaborado pela Coordenadoria de Planejamento e Projetos – (CPP) / Diretoria de Urbanismo (DIRURB) / SEDUR (PMC)
+            </footer>
+        </section>
+
+        <!-- Seção: Metodologia e Pontos de Atenção -->
+        <section class="mb-12">
+            <h2 class="text-2xl section-title text-center mb-8">Metodologia e Pontos de Atenção</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h2 class="text-2xl subsection-title mb-4">Metodologia Utilizada</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-violet-100 text-violet-700 font-bold rounded-full w-8 h-8 flex-shrink-0 flex items-center justify-center mr-4">1</div>
+                            <p class="text-slate-700"><b class="font-semibold text-slate-800">Referência:</b> Metodologia consolidada da Fundação João Pinheiro (FJP), referência nacional no tema.</p>
+                        </li>
+                         <li class="flex items-start">
+                            <div class="bg-violet-100 text-violet-700 font-bold rounded-full w-8 h-8 flex-shrink-0 flex items-center justify-center mr-4">2</div>
+                            <p class="text-slate-700"><b class="font-semibold text-slate-800">Fontes de Dados:</b> Combinação de dados do Censo Demográfico 2022 (IBGE) para Camaçari e do Cadastro Único (CadÚnico) do município.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-violet-100 text-violet-700 font-bold rounded-full w-8 h-8 flex-shrink-0 flex items-center justify-center mr-4">3</div>
+                            <p class="text-slate-700"><b class="font-semibold text-slate-800">Cálculo Adaptado:</b> Aplicação de diretrizes da Nota Técnica FJP nº 1/2024 para estimar o "Ônus Excessivo com Aluguel", suprindo a ausência do dado no Censo 2022.</p>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="card border-l-4 border-amber-400 bg-amber-50">
+                    <h2 class="text-2xl subsection-title mb-4 text-amber-700">Pontos de Atenção</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                             <svg class="w-6 h-6 text-amber-500 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" /></svg>
+                            <div>
+                                <h3 class="font-semibold text-amber-800">Ausência de Dados de Aluguel no Censo 2022</h3>
+                                <p class="text-amber-700">O Censo 2022 não investigou o valor pago em aluguel. Isso impede o cálculo direto do componente "Ônus Excessivo". A estimativa apresentada é uma proxy, baseada em dados do CadÚnico e da PNAD Contínua, conforme orientação da FJP.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-amber-500 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-1.5l-2.625 2.625M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                             <div>
+                                <h3 class="font-semibold text-amber-800">Diferenças Regionais</h3>
+                                <p class="text-amber-700">A estrutura do déficit de Camaçari mostra-se diferente da média do "Entorno Metropolitano de Salvador", com um peso muito maior da Coabitação Familiar, o que reforça a importância da análise local.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <footer class="footer-text">
+                Infográfico elaborado pela Coordenadoria de Planejamento e Projetos – (CPP) / Diretoria de Urbanismo (DIRURB) / SEDUR (PMC)
+            </footer>
+        </section>
+
+        <!-- Seção: Análise Comparativa (Apêndice) -->
+        <section class="mb-12">
+            <h2 class="text-2xl section-title text-center mb-8">Análise Comparativa: Camaçari vs. Entorno Metropolitano</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                 <div class="card">
+                    <h3 class="text-xl subsection-title mb-3">Estimativa Alternativa</h3>
+                    <p class="text-slate-600 mb-4">Para fins de contextualização, foi calculada uma estimativa alternativa aplicando os percentuais médios do <strong>"Entorno metropolitano de Salvador"</strong> (dados FJP 2022) ao universo de domicílios de Camaçari.</p>
+                     <div class="bg-violet-50 p-6 rounded-lg text-center">
+                         <p class="text-lg text-slate-600">Déficit Habitacional (Cenário Alternativo)</p>
+                        <p class="text-5xl font-bold text-violet-700 my-3">9.236</p>
+                        <p class="text-lg text-slate-600">unidades (8,40% dos domicílios particulares permanentes ocupados)</p>
+                     </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl subsection-title mb-3">Interpretação das Divergências</h3>
+                    <p class="text-slate-600 mb-4">A comparação revela que o perfil do déficit de Camaçari é <strong>único e distinto</strong> da média regional.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                           <strong class="text-green-600 font-black text-lg mr-3">↑</strong>
+                           <div><strong class="text-green-700">Coabitação Familiar:</strong> Drasticamente MAIOR em Camaçari (13.035) do que na estimativa alternativa (683), sendo o principal componente local.</div>
+                        </li>
+                        <li class="flex items-start">
+                           <strong class="text-red-600 font-black text-lg mr-3">↓</strong>
+                           <div><strong class="text-red-700">Habitação Precária:</strong> Substancialmente MENOR em Camaçari (768) do que na estimativa alternativa (4.951).</div>
+                        </li>
+                    </ul>
+                     <p class="text-slate-600 mt-4">Esta análise reforça a necessidade de políticas focadas nas especificidades locais, em vez de aplicar modelos regionais genéricos.</p>
+                </div>
+            </div>
+
+            <div class="card overflow-x-auto">
+                 <h3 class="text-xl subsection-title mb-4 text-center">Tabela Comparativa das Estimativas</h3>
+                <table class="w-full text-left">
+                    <thead class="border-b-2 border-slate-200">
+                        <tr>
+                            <th class="p-3 text-sm font-semibold tracking-wide">Componente do Déficit</th>
+                            <th class="p-3 text-sm font-semibold tracking-wide text-center bg-violet-50 text-violet-800">Estimativa Principal (Camaçari)</th>
+                            <th class="p-3 text-sm font-semibold tracking-wide text-center bg-slate-50 text-slate-800">Estimativa Alternativa (% Entorno)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="p-3">1. Habitação Precária</td>
+                            <td class="p-3 text-center font-bold text-red-600">768</td>
+                            <td class="p-3 text-center font-bold text-slate-600">4.951</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">2. Coabitação Familiar</td>
+                            <td class="p-3 text-center font-bold text-green-600">13.035</td>
+                            <td class="p-3 text-center font-bold text-slate-600">683</td>
+                        </tr>
+                         <tr>
+                            <td class="p-3">3. Ônus Excessivo com Aluguel</td>
+                            <td class="p-3 text-center font-bold text-orange-600">2.832</td>
+                            <td class="p-3 text-center font-bold text-slate-600">3.602</td>
+                        </tr>
+                        <tr class="border-t-2 border-slate-300">
+                            <td class="p-4 text-base font-bold text-slate-800">DÉFICIT TOTAL ESTIMADO</td>
+                            <td class="p-4 text-center text-lg font-bold bg-violet-100 text-violet-800">16.635</td>
+                            <td class="p-4 text-center text-lg font-bold bg-slate-100 text-slate-800">9.236</td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="p-3 text-sm font-semibold text-slate-600">% do Déficit sobre Domicílios</td>
+                            <td class="p-3 text-center text-sm font-semibold text-violet-700">15,13%</td>
+                            <td class="p-3 text-center text-sm font-semibold text-slate-700">8,40%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <footer class="footer-text">
+                Infográfico elaborado pela Coordenadoria de Planejamento e Projetos – (CPP) / Diretoria de Urbanismo (DIRURB) / SEDUR (PMC)
+            </footer>
+        </section>
+
+        <!-- Seção: Referências Bibliográficas -->
+        <section class="mb-12">
+            <h2 class="text-2xl section-title text-center mb-8">Referências Bibliográficas</h2>
+            <div class="card">
+                <ul class="space-y-4 text-sm text-slate-700">
+                    <li class="flex items-start">
+                        <span class="text-violet-600 mr-3">●</span>
+                        <div><strong>FUNDAÇÃO JOÃO PINHEIRO.</strong> <i>Relatório Déficit habitacional no Brasil 2022.</i> Belo Horizonte: FJP, 2023.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-violet-600 mr-3">●</span>
+                        <div><strong>FUNDAÇÃO JOÃO PINHEIRO.</strong> <i>Nota Técnica FJP/DIMEQ - Nº 01/2024. As voltas que o ônus dá: alternativas para o cálculo do ônus excessivo com o aluguel urbano municipal.</i> Belo Horizonte: FJP, janeiro de 2024.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-violet-600 mr-3">●</span>
+                        <div><strong>FUNDAÇÃO JOÃO PINHEIRO.</strong> <i>Nota Técnica FJP/DIMEQ - Nº 04/2023. Os desafios do cálculo do Déficit Habitacional frente ao Censo Demográfico.</i> Belo Horizonte: FJP, 28 de novembro de 2023.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-violet-600 mr-3">●</span>
+                        <div><strong>FUNDAÇÃO JOÃO PINHEIRO.</strong> <i>Metodologia do Déficit Habitacional e da Inadequação de Domicílios no Brasil 2016-2019 (versão 2.1).</i> Governo de Minas Gerais / Secretaria de Estado de Planejamento e Gestão, 2021.</div>
+                    </li>
+                     <li class="flex items-start">
+                        <span class="text-violet-600 mr-3">●</span>
+                        <div><strong>INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE).</strong> <i>Censo Demográfico 2022 - Características dos domicílios: resultados do universo.</i> Rio de Janeiro: IBGE, 2024.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-violet-600 mr-3">●</span>
+                        <div><strong>INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE).</strong> <i>Pesquisa Nacional por Amostra de Domicílios Contínua – microdados 2022.</i> Rio de Janeiro: IBGE, 2023.</div>
+                    </li>
+                </ul>
+            </div>
+            <footer class="footer-text">
+                Infográfico elaborado pela Coordenadoria de Planejamento e Projetos – (CPP) / Diretoria de Urbanismo (DIRURB) / SEDUR (PMC)
+            </footer>
+        </section>
+
+        <!-- Créditos -->
+        <section class="card bg-slate-800 text-slate-200">
+            <h2 class="text-xl font-semibold text-center text-white mb-4">REALIZAÇÃO</h2>
+            <div class="text-center text-slate-300">
+                <p class="font-bold text-lg text-white">Fábio Moura Costa – Urbanista e Msc. em Geografia</p>
+                <p class="mt-2">Coordenadoria de Planejamento e Projetos (CPP)</p>
+                <p>Diretoria de Urbanismo (DIRURB)</p>
+                <p>Secretaria de Desenvolvimento Urbano e Meio Ambiente (SEDUR) / PMC</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
